@@ -1,0 +1,42 @@
+# Copy to config.toml and enter both API credentials below.
+[knowbe4]
+# Select the endpoint for your KnowBe4 region: training (US), eu, ca, uk, or de.
+graphql_url = "https://training.knowbe4.com/graphql"
+product_api_token = ""
+
+# Empty means all processed, unresolved messages without previous connector tags.
+# To opt in by tag instead, set this to e.g. "Joe Sandbox Request".
+required_tag = ""
+# Optional PhishER Lucene query. Empty adds no extra filtering.
+# If required_tag is set, messages must match BOTH the tag and this query.
+# Example: email_search = 'subject: "invoice"'
+email_search = ""
+# true: also set the PhishER category to Threat after a Malicious verdict.
+# false: publish the verdict tags and discussion comments without changing category.
+# Suspicious, Clean and Unknown verdicts never change the category.
+mark_threat_on_malicious = true
+
+[joe_sandbox]
+cloud_api_url = "https://jbxcloud.joesecurity.org/api"
+report_base_url = "https://jbxcloud.joesecurity.org"
+cloud_api_key = ""
+# Also analyze with Joe Reverser: https://www.joesecurity.org/joe-reverser
+enable_reverser = true
+# Reuse matching Joe Sandbox analyses. false sends report-cache=0; true sends 1.
+# No cache age limit is set. This does not skip a separately requested Reverser job.
+enable_cache = false
+
+[connection]
+timeout_seconds = 30
+# Optional outbound proxy for both APIs and the EML download/upload.
+# Empty means direct connections; environment proxy settings are ignored.
+# Examples: "http://proxy.example.com:3128", "https://proxy.example.com:8443"
+# Authentication: "http://username:password@proxy.example.com:3128"
+# Percent-encode special characters in username/password. TLS verification stays enabled.
+# This does not change the network used inside Joe Sandbox analyses.
+proxy_url = ""
+
+[service]
+check_mail_every_seconds = 60
+max_wait_seconds = 7200
+database_path = "/data/state.sqlite3"

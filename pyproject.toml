@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "joe-sandbox-knowbe4"
+version = "0.1.0"
+description = "Docker connector between KnowBe4 PhishER and Joe Sandbox Cloud"
+requires-python = ">=3.11"
+dependencies = ["requests==2.32.5"]
+
+[project.scripts]
+joe-phisher = "joe_phisher.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
