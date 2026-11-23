@@ -21,6 +21,8 @@ Investigate reported emails directly in your [PhishER](https://www.knowbe4.com/p
 
 2. Enter your PhishER Product API token and Joe Sandbox Cloud API key in `config.toml`. If your KnowBe4 account is outside the US, set the endpoint for your region. See [Configuration options](#configuration-options) for the settings.
 
+   To create your PhishER token, follow [Creating a Product API Token](https://support.knowbe4.com/hc/en-us/articles/10495383627155-Product-API-Overview#h_01HBDX0KNGC7G7ZNH6XBH3NZW0) in KnowBe4’s [Product API Overview](https://support.knowbe4.com/hc/en-us/articles/10495383627155-Product-API-Overview). Enter the token as `product_api_token` under `[knowbe4]`.
+
    To find your Joe Sandbox Cloud API key, open the account menu in the upper right and select **User Settings → API Key**. Enter the key as `cloud_api_key` under `[joe_sandbox]`.
 
    ![Joe Sandbox Cloud account menu showing API Key under User Settings](docs/images/joe-sandbox-cloud-api-key.png)
