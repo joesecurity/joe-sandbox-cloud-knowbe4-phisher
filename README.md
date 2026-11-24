@@ -1,5 +1,3 @@
-![Joe Sandbox Cloud for KnowBe4 PhishER](docs/images/joe-sandbox-knowbe4-phisher.png)
-
 # Joe Sandbox Cloud for KnowBe4 PhishER
 
 Investigate reported emails directly in your [PhishER](https://www.knowbe4.com/products/phisher-plus) inbox. The connector sends selected emails, including their headers, body, and attachments, to [Joe Sandbox Cloud](https://www.joesecurity.org/joe-sandbox-cloud) for analysis. By default, the connector also uses [Joe Reverser](https://www.joesecurity.org/joe-reverser) to investigate phishing and malware when your account includes it. It posts the verdict, available threat names and score, and a link to the submission in the message’s **Discussion** panel. Your team can triage the email in PhishER and open the full analysis when needed.
